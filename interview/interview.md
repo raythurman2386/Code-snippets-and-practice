@@ -50,3 +50,25 @@
         (acc, val, i) => acc.concat(i > 1 ? acc[i - 1] + acc[i - 2] : i),
         []
       )
+
+# Difference between an expression and a statement in JavaScript
+  There are two main syntactic categories in JavaScript: expressions and statements. A third one is both together, referred to as an expression statement, summarized as:
+
+    Expression: produces a value
+    Statement: performs an action
+    Espression Statement: produces a value and performs action
+
+  Rule of thumb: 
+  
+  `If you can print it or assign it to a variable, it's an expression. If you can't, it's a statement.`
+
+# What is the `alt` attribute on images
+  The alt attribute provides alternative information for an image if a user cannot view it. The `alt` attribute should be used to desribe any images except those which only serve a decorative purpose, in which case it should be left empty.
+
+# What is the difference between lexical scoping and dynamic scoping
+  Lexica lscoping refers to when the location of a function's definition determines which variables you have access to. On the other hand, dynamic scoping uses the location of the function's invocation to determine which variables are available.
+
+# What does lifting state up in React mean
+  When several components need to share the same data, then it is recommended to lift the shared state up to their closest common ancestor. 
+
+  For example, if two child components share the same data, it is recommended to move the shared state to the parent instead of maintaining the local state in both child components.
