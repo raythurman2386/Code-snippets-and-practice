@@ -93,3 +93,12 @@
     ]
 
     nest(comments);
+
+# What are JavaScript data types
+  The latest ECMAScript standard defines seven data types, six of them being primitive: 
+  
+  `Boolean, Null, Undefined, Number, String, Symbol` and one non primitive data type: `Object`.
+
+    Mention of newly added Symbol data type
+    Array, Date and Function are all of type object
+    Functions in JS are objects with the capability of being callable.
