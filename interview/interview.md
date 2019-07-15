@@ -72,3 +72,24 @@
   When several components need to share the same data, then it is recommended to lift the shared state up to their closest common ancestor. 
 
   For example, if two child components share the same data, it is recommended to move the shared state to the parent instead of maintaining the local state in both child components.
+
+# What is recursion and when is it useful
+  Recursion is the repeated application of a process. In JavaScript, recursion involves functions that call themselves repeatedly until they reach a base condition. The base condition breaks out of the recursion loop because otherwise the function would call itself indefinitely. Recursion is very useful when working with data structures that contain nesting where the number of levels deep is unknown.
+
+  For example, you may have a thread of comments returned from a database that exist in a flat array but need to be nested for display in the UI.
+
+    const nest = (items, id = null, link = "parent_id") =>
+      items
+        .filter(item => item[link] === id)
+        .map(item => ({...item, children: nest(items, item.id)}));
+
+    const comments = [
+      { id: 1, parent_id: null, text: "First reply to post." },
+      { id: 2, parent_id: 1, text: "First reply to comment #1." },
+      { id: 3, parent_id: 1, text: "second reply to comment #1." },
+      { id: 4, parent_id: 3, text: "First reply to comment #3." },
+      { id: 5, parent_id: 4, text: "First reply to comment #4." },
+      { id: 6, parent_id: null, text: "First reply to post." },
+    ]
+
+    nest(comments);
