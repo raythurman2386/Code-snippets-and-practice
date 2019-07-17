@@ -102,3 +102,13 @@
     Mention of newly added Symbol data type
     Array, Date and Function are all of type object
     Functions in JS are objects with the capability of being callable.
+
+# What is the event loop in Node
+  The event loop handles all async callbacks. Callbacks are queued in a loop, while other code runs, and will run one by one when the response for each one has been received.
+
+# What is defer and async attributes on a <script> tag
+  If neither attribute is present, the script is downloaded and executed synchronously, and will halt parsing of the document until it has finished executing. 
+
+  The `defer` attribute downloads the script while the document is still parsing but waits until the document has finished parsing before executing it.
+
+  `async` attribute downloads the script during parsing the document but will pause the parser to execute the script before it has fully finished parsing. `async` scripts will not necessarily execute in order.
