@@ -1,4 +1,4 @@
-/* 	Hover Box Shadow	 */
+/* 	 Hover Box Shadow	  */
 .hover-shadow-box-animation {
 	display: inline-block;
 	vertical-align: middle;
@@ -15,7 +15,7 @@
 	transform: scale(1.2);
 }
 
-/* Pretty text underline */
+/*   Pretty text underline   */
 .pretty-text-underline {
 	display: inline;
 	text-shadow: 1px 1px #f5f6f9, -1px 1px #f5f6f9, 1px -1px #f5f6f9;
@@ -35,7 +35,7 @@
 	text-shadow: none;
 }
 
-/* Grid centering */
+/*   Grid centering   */
 .grid-centering {
 	display: grid;
 	justify-content: center;
@@ -43,7 +43,7 @@
 	height: 100px;
 }
 
-/* Gradient Text */
+/*   Gradient Text   */
 .grid-centering {
 	background: -webkit-linear-gradient(pink, red);
 	-webkit-text-fill-color: transparent;
@@ -51,7 +51,7 @@
 	-webkit-background-clip: text;
 }
 
-/* Sibling fade */
+/*  	Sibling fade	 */
 span {
 	padding: 0 1rem;
 	transition: opacity 0.2s;
