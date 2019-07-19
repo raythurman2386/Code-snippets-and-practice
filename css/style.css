@@ -1,3 +1,7 @@
+.spacer {
+	margin: 1rem auto;
+}
+
 /* 	 Hover Box Shadow	  */
 .hover-shadow-box-animation {
 	display: inline-block;
