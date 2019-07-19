@@ -112,3 +112,9 @@
   The `defer` attribute downloads the script while the document is still parsing but waits until the document has finished parsing before executing it.
 
   `async` attribute downloads the script during parsing the document but will pause the parser to execute the script before it has fully finished parsing. `async` scripts will not necessarily execute in order.
+
+# In which states can a Promise be
+  A Promise is in one of these states: 
+    pending: initial state, neither fulfilled nor rejected.
+    fulfilled: meaning that the operation completed successfully.
+    rejected: the operation failed.
