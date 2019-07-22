@@ -118,3 +118,4 @@
     pending: initial state, neither fulfilled nor rejected.
     fulfilled: meaning that the operation completed successfully.
     rejected: the operation failed.
+
