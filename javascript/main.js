@@ -35,47 +35,46 @@ console.log(tomorrow());
 // Implement Carousel JS
 class Carousel {
 	constructor(element) {
-			this.carousel = element;
-			this.leftBtn = element.querySelector('.left-button');
-			this.rightBtn = element.querySelector('.right-button');
-			this.images = element.querySelectorAll('img');
-			this.count = 0;
-			this.imageNum = this.images.length;
-			this.current = this.images[this.count];
-			this.current.style.display = 'flex';
-			this.leftBtn.addEventListener('click', () => this.scrollLeft());
-			this.rightBtn.addEventListener('click', () => this.scrollRight());
+		this.carousel = element;
+		this.leftBtn = element.querySelector('.left-button');
+		this.rightBtn = element.querySelector('.right-button');
+		this.images = element.querySelectorAll('img');
+		this.count = 0;
+		this.imageNum = this.images.length;
+		this.current = this.images[this.count];
+		this.current.style.display = 'flex';
+		this.leftBtn.addEventListener('click', () => this.scrollLeft());
+		this.rightBtn.addEventListener('click', () => this.scrollRight());
 	}
 
 	scrollLeft() {
-			if (this.count === 0) {
-					this.count = this.imageNum - 1;
-			} else {
-					this.count -= 1;
-			}
-			this.current.style.display = 'none';
-			this.current = this.images[this.count];
-			this.current.style.display = 'flex';
+		if (this.count === 0) {
+			this.count = this.imageNum - 1;
+		} else {
+			this.count -= 1;
+		}
+		this.current.style.display = 'none';
+		this.current = this.images[this.count];
+		this.current.style.display = 'flex';
 	}
 
 	scrollRight() {
-			if (this.count === this.imageNum - 1) {
-					this.count = 0;
-			} else {
-					this.count += 1;
-			}
-			this.current.style.display = 'none';
-			this.current = this.images[this.count];
-			this.current.style.display = 'flex';
+		if (this.count === this.imageNum - 1) {
+			this.count = 0;
+		} else {
+			this.count += 1;
+		}
+		this.current.style.display = 'none';
+		this.current = this.images[this.count];
+		this.current.style.display = 'flex';
 	}
-
 }
 
 let carousel = document.querySelector('.carousel');
 let ref = new Carousel(carousel);
 
 // Handle change event
-handleChange(event) {
-	const { name, value, type, checked } = event.target
-	type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
+function handleChange(event) {
+	const { name, value, type, checked } = event.target;
+	type === 'checkbox' ? this.setState({ [name]: checked }) : this.setState({ [name]: value });
 }
