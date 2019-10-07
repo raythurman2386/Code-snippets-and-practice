@@ -52,3 +52,24 @@ miniMaxSum([ 3, 4, 5, 1, 2 ]);
 
 // For example, if your niece is turning
 // years old, and the cake will have candles of height, , , , she will be able to blow out candles successfully, since the tallest candles are of height and there are such candles.
+
+// first item is the number of candles
+const birthdayCakeCandles = (arr) => {
+	// remove the first item
+	let candles = arr.shift();
+	// vars to hold the highest number
+	// and the total times that number used
+	let highest = 0;
+	let total = 0;
+	// loop over the array and compare to the highest
+	// Add to total if number is equal to highest
+	arr.forEach((num) => {
+		if (num >= highest) {
+			highest = num;
+			total++;
+		}
+	});
+	console.log(total);
+};
+
+birthdayCakeCandles([ 4, 3, 2, 1, 3 ]);
