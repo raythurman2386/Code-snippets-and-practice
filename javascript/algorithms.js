@@ -2,10 +2,6 @@
 'use strict';
 
 // Plus Minus
-// the first element is the length of the array
-// let array = [ 6, -4, 3, -9, 0, 4, 1 ];
-// let secondArr = [ 8, 1, 2, 3, -1, -2, -3, 0, 0 ];
-
 const plusMinus = (arr) => {
 	// shift the first element for the length value
 	let len = arr.shift();
@@ -31,13 +27,10 @@ const plusMinus = (arr) => {
 	console.log((zero / len).toFixed(6));
 };
 
-// plusMinus(array);
-// plusMinus(secondArr);
+plusMinus([ 6, -4, 3, -9, 0, 4, 1 ]);
 
 // Mini-Max Sum
 // Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers.Then print the respective minimum and maximum values as a single line of two space - separated long integers.
-
-let array = [ 3, 4, 5, 1, 2 ];
 
 const miniMaxSum = (arr) => {
 	// Make sure the array is sorted
@@ -52,7 +45,7 @@ const miniMaxSum = (arr) => {
 	console.log(lowest, highest);
 };
 
-miniMaxSum(array);
+miniMaxSum([ 3, 4, 5, 1, 2 ]);
 
 // Birthday Cake Candles
 // You are in charge of the cake for your niece's birthday and have decided the cake will have one candle for each year of her total age. When she blows out the candles, she’ll only be able to blow out the tallest ones. Your task is to find out how many candles she can successfully blow out.
