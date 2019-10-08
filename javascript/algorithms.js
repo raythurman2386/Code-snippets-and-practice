@@ -54,22 +54,28 @@ miniMaxSum([ 3, 4, 5, 1, 2 ]);
 // years old, and the cake will have candles of height, , , , she will be able to blow out candles successfully, since the tallest candles are of height and there are such candles.
 
 // first item is the number of candles
-const birthdayCakeCandles = (arr) => {
-	// remove the first item
-	let candles = arr.shift();
-	// vars to hold the highest number
-	// and the total times that number used
-	let highest = 0;
-	let total = 0;
-	// loop over the array and compare to the highest
-	// Add to total if number is equal to highest
-	arr.forEach((num) => {
-		if (num >= highest) {
-			highest = num;
-			total++;
-		}
-	});
-	console.log(total);
+const birthdayCakeCandles = (ar) => {
+	let max = Math.max(...ar);
+	const filteredArray = ar.filter((item) => item === max);
+	return filteredArray.length;
 };
 
-birthdayCakeCandles([ 4, 3, 2, 1, 3 ]);
+// console.log(birthdayCakeCandles([ 3, 2, 1, 3 ]), 'bday cake');
+
+// regex match beginning vowel to end vowel
+function regexVar() {
+	/*
+	 * Declare a RegExp object variable named 're'
+	 * It must match a string that starts and ends with the same vowel (i.e., {a, e, i, o, u})
+	 */
+	const re = /^([aeiou]).*\1$/;
+
+	return re;
+}
+
+// TIME CONVERSION
+// Given a time in
+// 	12-hour AM / PM format, convert it to military(24 - hour) time.
+// 		Note: Midnight is 12: 00: 00AM on a 12 - hour clock, and 00: 00: 00 on a 24 - hour clock.Noon is 12: 00: 00PM on a 12 - hour clock, and 12: 00: 00 on a 24 - hour clock.
+
+// Complete the timeConversion function in the editor below.It should return a new string representing the input time in 24 hour format.
