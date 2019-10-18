@@ -78,3 +78,21 @@ function handleChange(event) {
 	const { name, value, type, checked } = event.target;
 	type === 'checkbox' ? this.setState({ [name]: checked }) : this.setState({ [name]: value });
 }
+
+// IIFE Examples
+(function() {
+	console.log('IIFE using Parens');
+})();
+
+~(function() {
+	console.log('IIFE using a bitwise operator');
+})();
+
+void (function() {
+	console.log('IIFE using the void operator');
+})();
+
+/*
+	Code splitting lets you split your application
+	into several bundles based on different entry points, and also lets you extract dependencies shared across bundles into a single reusable bundle
+*/
