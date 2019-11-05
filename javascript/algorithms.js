@@ -117,17 +117,17 @@ const primeList = (start, end) => {
 
 	// 	Output: all i such that A[i] is true.
 	let numArr = [];
-	let index = 0;
 
 	for (let i = start; i <= end; i++) {
 		numArr.push(i);
 	}
 
 	numArr.forEach((num, i) => {
+		let index = 0;
 		if (num % numArr[index] === 0 && num !== numArr[index]) {
 			numArr.splice(i, 1);
 		}
-		index++;
+		index += 1;
 	});
 
 	console.log(numArr, 'Prime List');
