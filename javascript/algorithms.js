@@ -1,3 +1,6 @@
+// Adds a ts checker to you app
+//@ts-check
+
 // Hackerrank Algorithms
 'use strict';
 
@@ -91,10 +94,43 @@ function gradingStudents(grades) {
 	// Write your code here
 }
 
-gradingStudents();
 // TIME CONVERSION
 // Given a time in
 // 	12-hour AM / PM format, convert it to military(24 - hour) time.
 // 		Note: Midnight is 12: 00: 00AM on a 12 - hour clock, and 00: 00: 00 on a 24 - hour clock.Noon is 12: 00: 00PM on a 12 - hour clock, and 12: 00: 00 on a 24 - hour clock.
 
 // Complete the timeConversion function in the editor below.It should return a new string representing the input time in 24 hour format.
+
+// Sieve of Eratosthenes
+// Prime numbers in a range
+const primeList = (start, end) => {
+	// Make a list of the numbers from start to end
+	// First number in the list is start
+
+	// Input: an integer n > 1.
+	// Let A be an array of Boolean values, indexed by integers 2 to n, initially all set to true.
+
+	// for i = 2, 3, 4, ..., not exceeding √n:
+	// 	if A[i] is true:
+	// 		for j = i2, i2 + i, i2 + 2i, i2 + 3i, ..., not exceeding n:
+	// 			A[j] := false.
+
+	// 	Output: all i such that A[i] is true.
+	let numArr = [];
+	let index = 0;
+
+	for (let i = start; i <= end; i++) {
+		numArr.push(i);
+	}
+
+	numArr.forEach((num, i) => {
+		if (num % numArr[index] === 0 && num !== numArr[index]) {
+			numArr.splice(i, 1);
+		}
+		index++;
+	});
+
+	console.log(numArr, 'Prime List');
+};
+
+primeList(2, 30);
