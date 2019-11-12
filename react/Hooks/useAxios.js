@@ -1,8 +1,10 @@
-import axios from 'axios'
-import { useState, useEffect } from 'react'
+// @ts-ignore
+import axios from "axios";
+// @ts-ignore
+import { useState, useEffect } from "react";
 
 export const useAxios = () => {
-  const [item, setItem] = useState([])
+  const [item, setItem] = useState([]);
 
   useEffect(() => {
     axios
@@ -10,8 +12,8 @@ export const useAxios = () => {
       // API here
       ()
       .then(res => setItem(res.data))
-      .catch(err => console.log(err))
-  }, [])
+      .catch(err => console.log(err));
+  }, []);
 
-  return [item, setItem]
-}
+  return [item, setItem];
+};
