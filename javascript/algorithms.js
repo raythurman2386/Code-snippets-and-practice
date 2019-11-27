@@ -141,3 +141,26 @@ const primeList = (start, end) => {
 };
 
 primeList(2, 30);
+
+/* Complete the 'diagonalDifference' function below.
+*
+* The function is expected to return an INTEGER.
+* The function accepts 2D_INTEGER_ARRAY arr as parameter.
+*/
+
+function diagonalDifference(arr) {
+   // Write your code here
+   let primary = 0;
+   let secondary = 0;
+   // we know the 2d matrix is a square so the length of the array
+   // is also the length of the inside arrays
+   const {length} = arr
+   let x = 0; // beginning of array
+   let y = length - 1; // end of array
+   for (let i = 0; i < length; i++) {
+       primary += arr[i][x+i]
+       secondary += arr[i][y-i]
+   }
+
+   return Math.abs(primary - secondary)
+}
