@@ -223,3 +223,16 @@ function extraLongFactorials(n) {
 
   console.log(fact);
 }
+
+// Get date by name
+function getDayName(dateString) {
+  const date = new Date(dateString)
+
+  const options = {
+    weekday: 'long'
+  }
+
+  return new Intl.DateTimeFormat('en-us', options).format(date);
+}
+
+console.log(getDayName(10 / 11 / 2009))
